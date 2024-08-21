@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="professions">
+        <item>frontend</item>
+        <item>backend</item>
+        <item>mobile</item>
+    </string-array>
+</resources>

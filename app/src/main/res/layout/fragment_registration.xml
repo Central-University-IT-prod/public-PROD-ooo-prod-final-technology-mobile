@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".ui.registration.RegistrationFragment">
+
+    <LinearLayout
+        android:id="@+id/second"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edit_skille"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:hint="@string/skills"
+                android:padding="0dp"
+                android:textColorHint="@color/white"
+                app:boxBackgroundColor="@color/input_bg"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="@dimen/input_layout_corner_radius"
+                app:boxCornerRadiusBottomStart="@dimen/input_layout_corner_radius"
+                app:boxCornerRadiusTopEnd="@dimen/input_layout_corner_radius"
+                app:boxCornerRadiusTopStart="@dimen/input_layout_corner_radius"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/et_stille"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_add_skill"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/inter_extra_bold"
+                android:gravity="center"
+                android:text="Добавить"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_skills_list"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_registration"
+                android:gravity="center"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/iv_delete_skill"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@android:drawable/ic_menu_delete"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edit_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTintMode="src_over"
+            android:clipToPadding="false"
+            android:hint="@string/age"
+            android:padding="0dp"
+            android:textColorHint="@color/text_main"
+            app:boxBackgroundColor="@color/input_bg"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusBottomStart="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusTopEnd="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusTopStart="@dimen/input_layout_corner_radius"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <EditText
+                android:id="@+id/et_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:autofillHints=""
+                android:fontFamily="@font/inter_medium"
+                android:inputType="number"
+                android:textColor="@color/text_main"
+                tools:ignore="LabelFor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/spinner_profession"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/background_registration"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="20dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edit_bio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:clipToPadding="false"
+            android:hint="@string/about"
+            android:padding="0dp"
+            android:textColorHint="@color/white"
+            app:boxBackgroundColor="@color/input_bg"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusBottomStart="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusTopEnd="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusTopStart="@dimen/input_layout_corner_radius"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <EditText
+                android:id="@+id/et_bio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:autofillHints=""
+                android:fontFamily="@font/inter_medium"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/text_main"
+                tools:ignore="LabelFor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/back"
+                android:textColor="@color/background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/text_sign_up"
+                android:textColor="@color/background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/title_sign_up"
+            android:textAlignment="center"
+            android:textColor="@color/text_main"
+            android:textSize="24sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_registration_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:clipToPadding="false"
+            android:hint="@string/hint_fullname"
+            android:padding="0dp"
+            android:textColorHint="@color/white"
+            app:boxBackgroundColor="@color/input_bg"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusBottomStart="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusTopEnd="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusTopStart="@dimen/input_layout_corner_radius"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <EditText
+                android:id="@+id/et_registration_fullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:autofillHints=""
+                android:fontFamily="@font/inter_medium"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/text_main"
+                tools:ignore="LabelFor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_registration_telegram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:clipToPadding="false"
+            android:hint="@string/hint_telegram"
+            android:padding="0dp"
+            android:textColorHint="@color/white"
+            app:boxBackgroundColor="@color/input_bg"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusBottomStart="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusTopEnd="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusTopStart="@dimen/input_layout_corner_radius"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <EditText
+                android:id="@+id/et_registration_telegram"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:autofillHints=""
+                android:fontFamily="@font/inter_medium"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/text_main"
+                tools:ignore="LabelFor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_registration_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:clipToPadding="false"
+            android:hint="@string/hint_email"
+            android:padding="0dp"
+            android:textColorHint="@color/white"
+            app:boxBackgroundColor="@color/input_bg"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusBottomStart="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusTopEnd="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusTopStart="@dimen/input_layout_corner_radius"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <EditText
+                android:id="@+id/et_registration_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:autofillHints=""
+                android:fontFamily="@font/inter_medium"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/text_main"
+                tools:ignore="LabelFor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_registration_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:clipToPadding="false"
+            android:hint="@string/hint_password"
+            android:padding="0dp"
+            android:textColorHint="@color/white"
+            app:boxBackgroundColor="@color/input_bg"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusBottomStart="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusTopEnd="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusTopStart="@dimen/input_layout_corner_radius"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <EditText
+                android:id="@+id/et_registration_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:autofillHints=""
+                android:fontFamily="@font/inter_medium"
+                android:inputType="textPassword"
+                android:textColor="@color/text_main"
+                tools:ignore="LabelFor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_registration_password_repeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:clipToPadding="false"
+            android:hint="@string/hint_repeat_password"
+            android:padding="0dp"
+            android:textColorHint="@color/white"
+            app:boxBackgroundColor="@color/input_bg"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusBottomStart="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusTopEnd="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusTopStart="@dimen/input_layout_corner_radius"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <EditText
+                android:id="@+id/et_registration_password_repeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:autofillHints=""
+                android:fontFamily="@font/inter_medium"
+                android:inputType="textPassword"
+                android:textColor="@color/text_main"
+                tools:ignore="LabelFor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/text_already_have_account"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_to_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/text_sign_in"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_continiu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="@string/further"
+            android:textColor="@color/background"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_registration_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/half_transparent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+    </LinearLayout>
+
+
+</FrameLayout>

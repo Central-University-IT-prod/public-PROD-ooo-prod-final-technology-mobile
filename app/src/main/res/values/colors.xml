@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="telegram">#54A2F6</color>
+    <color name="yellow">#FFE11F</color>
+    <color name="transparent">#00000000</color>
+    <color name="primary">@color/yellow</color>
+    <color name="fon_card">#363535</color>
+    <color name="background">#151515</color>
+    <color name="text_main">@color/white</color>
+    <color name="input_bg">#666666</color>
+    <color name="half_transparent">#88000000</color>
+    <color name="mobile">#E6B0FF</color>
+    <color name="frontend">#C0FFB0</color>
+    <color name="backend">#B0CBFF</color>
+</resources>

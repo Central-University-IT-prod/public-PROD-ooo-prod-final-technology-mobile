@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/nav_nested_main">
+
+    <navigation
+        android:id="@+id/nav_nested_main"
+        app:startDestination="@id/mainScreenFragment">
+        <fragment
+            android:id="@+id/mainScreenFragment"
+            android:name="com.prodtechnology.teammatching.ui.main.MainScreenFragment"
+            android:label="fragment_main_screen"
+            tools:layout="@layout/fragment_main_screen">
+            <action
+                android:id="@+id/action_mainScreenFragment_to_teamFragment"
+                app:destination="@id/teamFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/teamFragment"
+            android:name="com.prodtechnology.teammatching.ui.team.TeamFragment"
+            android:label="fragment_team"
+            tools:layout="@layout/fragment_team" />
+    </navigation>
+    <navigation
+        android:id="@+id/nav_nested_notification"
+        app:startDestination="@id/notificationsFragment">
+        <fragment
+            android:id="@+id/notificationsFragment"
+            android:name="com.prodtechnology.teammatching.ui.notifications.NotificationsFragment"
+            android:label="fragment_notifications"
+            tools:layout="@layout/fragment_notifications">
+            <action
+                android:id="@+id/action_notificationsFragment_to_notificationTeamFragment"
+                app:destination="@id/notificationTeamFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/notificationTeamFragment"
+            android:name="com.prodtechnology.teammatching.ui.team.TeamFragment"
+            android:label="fragment_team"
+            tools:layout="@layout/fragment_team" />
+    </navigation>
+    <navigation
+        android:id="@+id/nav_nested_my_team"
+        app:startDestination="@id/nav_my_team">
+        <fragment
+            android:id="@+id/createTeamFragment"
+            android:name="com.prodtechnology.teammatching.ui.create_team.CreateTeamFragment"
+            android:label="fragment_create_team"
+            tools:layout="@layout/fragment_create_team">
+            <action
+                android:id="@+id/action_createTeamFragment_to_nav_my_team"
+                app:destination="@id/nav_my_team"
+                app:popUpTo="@id/createTeamFragment"
+                app:popUpToInclusive="true" />
+        </fragment>
+        <fragment
+            android:id="@+id/nav_my_team"
+            android:name="com.prodtechnology.teammatching.ui.team.TeamFragment"
+            android:label="fragment_team"
+            tools:layout="@layout/fragment_team">
+            <action
+                android:id="@+id/action_nav_my_team_to_createTeamFragment"
+                app:destination="@id/createTeamFragment" />
+        </fragment>
+    </navigation>
+</navigation>

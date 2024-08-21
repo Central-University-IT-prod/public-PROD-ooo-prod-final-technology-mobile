@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".ui.login.LoginFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/title_sign_in"
+            android:textAlignment="center"
+            android:textColor="@color/text_main"
+            android:textSize="24sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_auth_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTintMode="src_over"
+            android:clipToPadding="false"
+            android:hint="@string/hint_email"
+            android:padding="0dp"
+            android:textColorHint="@color/text_main"
+            app:boxBackgroundColor="@color/input_bg"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusBottomStart="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusTopEnd="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusTopStart="@dimen/input_layout_corner_radius"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <EditText
+                android:id="@+id/et_auth_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:autofillHints=""
+                android:fontFamily="@font/inter_medium"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/text_main"
+                tools:ignore="LabelFor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_auth_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:clipToPadding="false"
+            android:hint="@string/hint_password"
+            android:padding="0dp"
+            android:textColorHint="@color/text_main"
+            app:boxBackgroundColor="@color/input_bg"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusBottomStart="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusTopEnd="@dimen/input_layout_corner_radius"
+            app:boxCornerRadiusTopStart="@dimen/input_layout_corner_radius"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/white">
+
+            <EditText
+                android:id="@+id/et_auth_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:autofillHints=""
+                android:fontFamily="@font/inter_medium"
+                android:inputType="textPassword"
+                android:textColor="@color/text_main"
+                tools:ignore="LabelFor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/text_didnt_have_account"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_to_registration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/inter_extra_bold"
+                android:text="@string/text_sign_up"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="@string/text_sign_in"
+            android:textColor="@color/background"
+            android:textSize="18sp"
+            app:strokeColor="@color/primary" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_login_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/half_transparent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+    </LinearLayout>
+
+</FrameLayout>

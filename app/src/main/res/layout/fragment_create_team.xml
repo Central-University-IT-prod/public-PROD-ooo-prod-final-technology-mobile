@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".ui.create_team.CreateTeamFragment">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/title_team_creation"
+        android:textAlignment="center"
+        android:textColor="@color/text_main"
+        android:textSize="24sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_create_team_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:clipToPadding="false"
+        android:hint="@string/text_title"
+        android:padding="0dp"
+        android:textColorHint="@color/white"
+        app:boxBackgroundColor="@color/input_bg"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="@dimen/input_layout_corner_radius"
+        app:boxCornerRadiusBottomStart="@dimen/input_layout_corner_radius"
+        app:boxCornerRadiusTopEnd="@dimen/input_layout_corner_radius"
+        app:boxCornerRadiusTopStart="@dimen/input_layout_corner_radius"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp">
+
+        <EditText
+            android:id="@+id/et_create_team_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:autofillHints=""
+            android:fontFamily="@font/inter_medium"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/text_main"
+            tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_create_team_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:clipToPadding="false"
+        android:hint="@string/text_description"
+        android:padding="0dp"
+        android:textColorHint="@color/white"
+        app:boxBackgroundColor="@color/input_bg"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="@dimen/input_layout_corner_radius"
+        app:boxCornerRadiusBottomStart="@dimen/input_layout_corner_radius"
+        app:boxCornerRadiusTopEnd="@dimen/input_layout_corner_radius"
+        app:boxCornerRadiusTopStart="@dimen/input_layout_corner_radius"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp">
+
+        <EditText
+            android:id="@+id/et_create_team_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:autofillHints=""
+            android:fontFamily="@font/inter_medium"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/text_main"
+            tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="@string/text_create_team"
+        android:textColor="@color/background"
+        android:textSize="20sp" />
+</LinearLayout>

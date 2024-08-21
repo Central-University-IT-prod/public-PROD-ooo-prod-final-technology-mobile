@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">TeamMatching</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="teams">Команды</string>
+    <string name="participants">Участники</string>
+    <string name="title_nav_home">Главная</string>
+    <string name="title_nav_team">Моя команда</string>
+    <string name="title_nav_favourites">Избранные</string>
+    <string name="title_nav_mail">Входящие</string>
+    <string name="invite">Пригласить</string>
+    <string name="first_name_members">Имя</string>
+    <string name="second_name_members">Фамилия</string>
+    <string name="birthday">Дата рождения</string>
+    <string name="email">Email</string>
+    <string name="telegram">Telegram</string>
+    <string name="change_password">Сменить пароль</string>
+    <string name="skills">Навыки</string>
+    <string name="about">О себе</string>
+    <string name="error_bad_email">Неправильный email</string>
+    <string name="error_short_password">Минимальная длина пароля - 6 символов</string>
+    <string name="account">Аккаунт</string>
+    <string name="title_sign_up">Регистрация</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Пароль</string>
+    <string name="hint_repeat_password">Повторите пароль</string>
+    <string name="text_already_have_account">Уже есть аккаунт?</string>
+    <string name="text_sign_in">Войти</string>
+    <string name="text_sign_up">Зарегистрироваться</string>
+    <string name="error_something">Что-то пошло не так</string>
+    <string name="title_sign_in">Вход</string>
+    <string name="error_password_not_match">Пароли не совпадают</string>
+    <string name="mobile">mobile</string>
+    <string name="backend">backend</string>
+    <string name="frontend">frontend</string>
+    <string name="stack">Стек:</string>
+    <string name="about_team">Описание:</string>
+    <string name="hint_fullname">Полное имя (например Иванов Иван)</string>
+    <string name="hint_telegram">Телеграм юзернеим</string>
+    <string name="error_empty_field">Это поле не должно быть пустым</string>
+    <string name="text_didnt_have_account">Еще нет аккаунта?</string>
+    <string name="further">Далее</string>
+    <string name="back">Назад</string>
+    <string name="age">Возраст</string>
+    <string name="profession">Направление</string>
+    <string name="error_not_in_list">Выберите скилл из предлагаемого списка</string>
+    <string name="text_create_team">Создать команду</string>
+    <string name="text_title">Название</string>
+    <string name="text_description">Описание</string>
+    <string name="title_team_creation">Новая команда</string>
+    <string name="text_request">Отправить запрос на вступление</string>
+
+</resources>
